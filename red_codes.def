@@ -1,0 +1,30 @@
+// numeric symbol - excel sheet name (will take an m) - operator - dialog help
+CODE_DEF(XSUM, Sum, Sum, sum of A elements)			
+CODE_DEF(XASUM, Asum, Asum, sum of A elements)			
+CODE_DEF(XSUMSQR, Sumsqr, Sumsqr, sum of A elements)			
+CODE_DEF(XMEAN, Mean, Mean, mean of A elements)
+CODE_DEF(XMIN, Min, Min, minimum of A elements)
+CODE_DEF(XMAX, Max, Max, maximum of A elements)
+CODE_DEF(XNRM2, Nrm2, Nrm2, norm of matrix A)
+CODE_DEF(XAMIN, Amin, Amin, minimum of A elements)
+CODE_DEF(XAMAX, Amax, Amax, maximum of A elements)
+CODE_DEF(XIAMIN, iAmin, iAmin, index of absolute minimum of A elements)
+CODE_DEF(XIAMAX, iAmax, iAmax, index of absolute maximum of A elements)
+CODE_DEF(XIMIN, iMin, iMin, index of minimum of A elements)
+CODE_DEF(XIMAX, iMax, iMax, index maximum of A elements)
+CODE_DEF(XPROD, Prod, Prod, product of A elements)
+CODE_DEF(XABSPROD, AbsProd, AbsProd, product of A elements)
+CODE_DEF(XALL, All, all, all A elements true)			
+CODE_DEF(XANY, Any, any, any of A elements true)			
+CODE_DEF(XCOUNT, Count, count, count of A elements true)		
+CODE_DEF(XABSDEV, AbsDev, AbsDev, absolute deviation from mean)			
+CODE_DEF(XVARIANCE, Variance, Variance, variance (n))			
+
+#undef CODE_DEF
+
+/*
+CODE_DEF(XTRACE, Trace, trace, trace of matrix A)
+CODE_DEF(XSQUAREDNORM, SquaredNorn, squaredNorm, squared norm of matrix A)
+CODE_DEF(XNORM1, Norm1, lpNorm<1>, norm 1 of matrix A)
+CODE_DEF(XNORMINF, NormInf, lpNorm<Infinity>, norm infinity of matrix A)
+*/	

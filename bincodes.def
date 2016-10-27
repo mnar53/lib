@@ -1,0 +1,27 @@
+// numeric symbol - excel sheet name (will take an m) - operator - dialog help
+// some binaries are ops, some functions
+#define BIN_OP(op)	{ if (B.n == 1) SELF op *B.data; else SELF op VEC(B); return *this;}
+CODE_DEF(XADD, Add, +=, matrix addition A + B)			
+CODE_DEF(XSUB, Sub, -=, matrix subtraction A - B)
+CODE_DEF(XMUL, Mul, *=, matrix multiplication element-by-element A * B)
+CODE_DEF(XDIV, Div, /=, matrix division element-by-element A / B)
+#undef BIN_OP
+#define BIN_OP(op)  { if (B.n==1) SELF = SELF op *B.data; else SELF = SELF op VEC(B); return *this; }
+CODE_DEF(XGT, GT, >,    matrix A >  B)
+CODE_DEF(XGE, GE, >=,   matrix A >= B)
+CODE_DEF(XLT, LT, <,    matrix A <  B)
+CODE_DEF(XLE, LE, <=,   matrix A <= B)
+CODE_DEF(XEQ, EQ, ==,   matrix A =  B)
+CODE_DEF(XNE, NE, !=,   matrix A != B)
+#undef BIN_OP
+#define BIN_OP(op)  { if (B.n==1) SELF = SELF op *B.data ? SELF : *B.data; else SELF = SELF op VEC(B) ? SELF : VEC(B); return *this; }
+CODE_DEF(XCLIPLO, ClipLo, >, clip low)
+CODE_DEF(XCLIPHI, ClipHi, <, clip high)
+#undef BIN_OP
+#define BIN_OP(op)  { if (B.n==1) SELF = op(SELF-*B.data); else SELF = op(SELF-VEC(B)); return *this; }
+CODE_DEF(XABSDIFF, AbsDiff, abs, |Ai-Bi|)
+CODE_DEF(XSQRDIFF, SqrDiff, sqr, (Ai-Bi)^2)
+#undef BIN_OP
+#undef CODE_DEF
+
+
